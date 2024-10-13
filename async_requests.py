@@ -108,6 +108,7 @@ async def get_data():
 
 
 async def main_insert_people():
+    await init_models()
     person_data = await get_data()
     # print(person_data)
     async with Session() as session:
